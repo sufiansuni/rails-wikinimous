@@ -1,0 +1,13 @@
+
+<div class="row py-3">
+  <% @articles.each do |article| %>
+  <div class="col-2"></div>
+  <div class="col-8">
+  <article class="py-2">
+    <h2><%= link_to article.title, article_path(article) %></h2>
+    <%= article.content.truncate(100) %>
+  </article>
+  </div>
+  <div class="col-2"></div>
+<% end %>
+</div>
